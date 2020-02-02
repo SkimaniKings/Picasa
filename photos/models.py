@@ -12,6 +12,14 @@ class Picture(models.Model):
     
     def __str__(self):
         return self.description
+    
+    def search_by_location(cls,search_term):
+        locate = cls.objects.filter(title__icontains=search_term)
+        return locate
+
+     def search_by_category(cls,search_term):
+        locate = cls.objects.filter(title__icontains=search_term)
+        return cate
 
    
 class Category(models.Model):
@@ -21,16 +29,14 @@ class Category(models.Model):
         return self.category
     
     def search_by_category(cls,search_term):
-        cate = cls.objects.filter(title__icontains=search_term)
+        locate = cls.objects.filter(title__icontains=search_term)
         return cate
 
 class Location(models.Model):
     location = models.CharField(max_length =30)
     
     
-    def search_by_location(cls,search_term):
-        locate = cls.objects.filter(title__icontains=search_term)
-        return locate
+    
     
     def __str__(self):
         return self.location
