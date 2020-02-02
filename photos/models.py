@@ -17,7 +17,7 @@ class Picture(models.Model):
         locate = cls.objects.filter(title__icontains=search_term)
         return locate
 
-     def search_by_category(cls,search_term):
+    def search_by_category(cls,search_term):
         locate = cls.objects.filter(title__icontains=search_term)
         return cate
 
