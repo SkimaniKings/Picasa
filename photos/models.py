@@ -7,6 +7,9 @@ class Picture(models.Model):
     image = models.ImageField(upload_to = 'images/', default="")
     posted_date= models.DateTimeField(auto_now_add=True)
     description = models.CharField(max_length =200)
+    location = models.ForeignKey('Location')
+    category = models.ForeignKey('Category')
+
    
 class Category(models.Model):
     category = models.CharField(max_length =30)
