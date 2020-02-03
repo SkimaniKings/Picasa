@@ -11,7 +11,12 @@
 
 </div>
 {% for image in images %}
-<p>{{image.description}}</p>
 <img src="{{image.image.url}}" alt="">
+<p>{{image.description}}</p>
+<p>{{image.category}}</p>
+<p>{{image.location}}</p>
+<p>{{image.posted_date}}</p>
+
+
 {% endfor %}
 {%endblock%}
