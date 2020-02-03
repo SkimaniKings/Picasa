@@ -29,3 +29,6 @@
   .portfolio:hover {
     cursor: pointer;
   }
+  .portfolio {
+      border-radius: 10%;
+  }
