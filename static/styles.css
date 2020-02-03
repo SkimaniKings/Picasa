@@ -21,4 +21,11 @@
   span {
       font-family: 'Permanent Marker', cursive;  
   }
-  
+  .portfolio:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: opacity 0.5s ease-out;
+  }
+  .portfolio:hover {
+    cursor: pointer;
+  }
