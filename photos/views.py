@@ -9,4 +9,6 @@ def home(request):
     images = Picture.objects.all()
     return render (request, 'home.html', {"images":images})
 
+    
+
 
