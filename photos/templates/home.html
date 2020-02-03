@@ -3,11 +3,14 @@
 <div id="simon">
 
     <p class="para">Make a statement without saying a word.</p>
-    <form class="form-inline my-2 my-lg-0"role="search" action="{% url 'search_results' %}">
+    <form class="form-inline my-2 my-lg-0"role="search" >
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
     </form><br>
     <p class=" mute">Hint:Search on the Category of photos you would like.</p>
 
 </div>
+{% for image in images %}
+<p>{{image.description}}</p>
+{% endfor %}
 {%endblock%}
