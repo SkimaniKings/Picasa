@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
       url('',views.home,name = 'home'),
-      
+     
       
 ]
 

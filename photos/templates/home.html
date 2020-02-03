@@ -12,5 +12,6 @@
 </div>
 {% for image in images %}
 <p>{{image.description}}</p>
+<img src="{{image.image.url}}" alt="">
 {% endfor %}
 {%endblock%}
