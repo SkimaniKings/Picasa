@@ -20,15 +20,15 @@
 <div class="container-fluid">
     <div class="row mt-3">
         {% for image in images %}
-        <div class="col-sm-4">
-            <div class="img-box mb-3" style="width: 15rem;">
+        <div class="col-sm-3">
+            <div class="img-box mb-2" style="width: 20rem;">
 
                 <img class="thumbnail img-el img-fluid" src="{{image.image.url}}" alt="IMAGE LOADING...">
             </div>
             <div class="words">
                 <h4 class="text-bold"> Title:{{image.title}} </h4>
                 <p>
-                    <p>Posted on: {{image.posted_date}}</p>
+                    <p>Posted: {{image.posted_date}}</p>
 
                 </p>
                 <p>
