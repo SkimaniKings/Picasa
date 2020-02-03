@@ -3,7 +3,7 @@
 <div id="simon">
 
     <p class="para">Make a statement without saying a word.</p>
-    <form class="form-inline my-2 my-lg-0"role="search" >
+    <form class="form-inline my-2 my-lg-0" role="search">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
     </form><br>
@@ -17,26 +17,28 @@
 <p>{{image.category}}</p>
 <p>{{image.location}}</p>
 <p>{{image.posted_date}}</p> -->
-<div class="row mt-3">
-    {% for image in images %}
-    <div class="col-sm-4">
-      <div class="img-box mb-3" style="width: 15rem;">
+<div class="container-fluid">
+    <div class="row mt-3">
+        {% for image in images %}
+        <div class="col-sm-4">
+            <div class="img-box mb-3" style="width: 15rem;">
 
-        <img class="thumbnail img-el img-fluid" src="{{image.image.url}}" alt="IMAGE LOADING...">
-      </div>
-      <div class="words">
-        <h4 class="text-bold"> Title:{{image.title}} </h4>
-        <p>
-          <p>Description: {{image.posted_date}}</p>
-          
-        </p>
-        <p>
-          
-        </p>
-        <hr>
-      </div>
-    </div>
+                <img class="thumbnail img-el img-fluid" src="{{image.image.url}}" alt="IMAGE LOADING...">
+            </div>
+            <div class="words">
+                <h4 class="text-bold"> Title:{{image.title}} </h4>
+                <p>
+                    <p>Posted on: {{image.posted_date}}</p>
+
+                </p>
+                <p>
+
+                </p>
+                <hr>
+            </div>
+        </div>
 
 
-{% endfor %}
-{%endblock%}
+
+        {% endfor %}
+        {%endblock%}

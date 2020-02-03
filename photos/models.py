@@ -4,7 +4,7 @@ import datetime as dt
 # Create your models here.
 class Picture(models.Model):
     title = models.CharField(max_length =30)
-    image = models.ImageField(upload_to = 'images/', default="")
+    image = models.ImageField()
     posted_date= models.DateTimeField(auto_now_add=True)
     description = models.CharField(max_length =200)
     location = models.ForeignKey('Location',on_delete=models.CASCADE)
@@ -30,7 +30,7 @@ class Category(models.Model):
     
     def search_by_category(cls,search_term):
         locate = cls.objects.filter(title__icontains=search_term)
-        return cate
+        return locate
 
 class Location(models.Model):
     location = models.CharField(max_length =30)
