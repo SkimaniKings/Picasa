@@ -8,6 +8,32 @@
 
 ## BDD
 
+1. On load the User sees the User sees the home page that contains a list of various images.
+
+2. The user can be able to see further details on an image.
+   Input: The User clicks the image that they like.
+   Output: A modal appears that gives further information on an image ie. THe image description location and Category.
+
+3. The User Closes up the Modal
+   Input: The user once done going through the modal Clicks on the close button or anywhere outside the Modal
+   Output: The pop up modal Closes up.
+
+4. The Search button
+   Input: The User types in the Category of images that they want to be filtered.
+   Output: The images that are in that Category are filterd and displayed on the Homepage.
+
+5. The Search button
+   Input: The User types in the Category of images that they want to be filtered.
+   Output: The images that are in that Category are filterd and displayed on the Homepage.
+
+## Setup and Installations
+
+- clone the application `git clone <name of the repository>`
+- Navigate into the folder whereby the application has been set up.
+- Setup a virtual environment `virtualenv <environment name>` and activate it `source <environment_name>/bin/activate`
+- Install the Requirements and Dependancies `pip install -r requirements.txt`
+- Run the application `python3.6 manage.py runserver`
+
 ## Technologies Used
 
 - dj-database-url==0.5.0
@@ -20,8 +46,8 @@
 - pytz==2019.3
 - whitenoise==5.0.1
 
-## Licence 
- 
+## Licence
+
 The MIT License (MIT)
 
 Copyright (c) 2020 Simon Kimani
@@ -44,9 +70,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Contacts Information 
-- You can reach me at any time using :
-        - 0713813919
-        - kimanisiomon856@gmail.com
-## Author 
+## Contacts Information
+
+- You can reach me at any time using : - 0713813919 - kimanisiomon856@gmail.com
+
+## Author
+
 **Simon Kimani**
