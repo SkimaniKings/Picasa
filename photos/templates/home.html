@@ -17,7 +17,7 @@
             <div class="img-box mb-2" style="width: 20rem;">
 
                 <img class="portfolio thumbnail img-el img-fluid" src="{{image.image.url}}" alt="IMAGE LOADING..."
-                    data-toggle="modal" data-target="#exampleModalCenter">
+                    data-toggle="modal" data-target="#exampleModalCenter-{{image.id}}">
             </div>
             <div class="words">
                 <h4 class="text-bold"> Title:{{image.title}} </h4>
@@ -35,7 +35,7 @@
         {% endfor %}
         {% for image in images %}
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        <div class="modal fade" id="exampleModalCenter-{{image.id}}" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
