@@ -6,6 +6,7 @@
 
 ## Project Screenshot
 
+
 ## BDD
 
 1. On load the User sees the User sees the home page that contains a list of various images.
