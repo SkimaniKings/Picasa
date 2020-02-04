@@ -1,4 +1,38 @@
 {%extends 'base.html'%}
 {%block content%}
-  
-{%endblock%}
+
+
+  <div class="container content">
+    <div class="row">
+      <div class="col-md-6">
+        {% if images %}
+          <h3 class="mt-3">Found {{images|length}}  of searched term  {{message}}</h3>
+        {% else %}
+          <h3>0 Images with the searched term {{message}}</h3>
+        {% endif %}
+      </div>
+      </div>
+      <div class="row">
+        {% if images %}
+            {% for image in images %}
+            <div class="col-md-4">
+              <div class="card mt-5">
+                <div class="card-body">
+                  <h2>{{image.name}}</h2>
+                  <p>{{image.description}}</p>
+                  <img src="{{image.image.url}}" class="img-responsive w-100 btn btn-outline-info" alt="Search Term">
+                  <p class="mt-3">Taken at ~ {{image.location}}</p>
+                  <p> Category ~ {{image.category}}</p>
+                  <p>Posted on {{image.pub_date}}</p>
+                </div>
+                <!-- <input type="text" id="imagelink" class="form-control input-sm" value="https://mepicgallery.herokuapp.com{{image.image_path.url}}" class="hidden"> -->
+                <!-- <button class="btn btn-primary" onclick="CopyFunction()"> -->
+                    <!-- <i class="fa fa-copy" style="color: #D6962C"></i> Copy Link -->
+                </button>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      </div>
+{% endblock %}
