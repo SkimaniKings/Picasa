@@ -31,6 +31,10 @@ class Category(models.Model):
     def search_by_category(cls,search_term):
         locate = cls.objects.filter(title__icontains=search_term)
         return locate
+    
+    def save_category(self):
+            self.save()
+
 
 class Location(models.Model):
     location = models.CharField(max_length =30)
