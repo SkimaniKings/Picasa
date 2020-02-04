@@ -9,9 +9,9 @@ class LocationTest(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.location, Location))
 
-    # def test_save(self):
-    #     self.location.save_location()
-    #     location = Location.objects.all()
-    #     self.assertTrue(len(location) > 0)
+    def test_save(self):
+        self.location.save_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) > 0)
 
     
