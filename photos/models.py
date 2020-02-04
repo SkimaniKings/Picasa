@@ -13,14 +13,19 @@ class Picture(models.Model):
     def __str__(self):
         return self.description
     
-    # def search_by_location(cls,search_term):
-    #     locate = cls.objects.filter(title__icontains=search_term)
-    #     return locate
-
-    def search_by_category(cls,search_term):
-        locate = cls.objects.filter(title__icontains=search_term)
-        return cate
-
+       
+    def save_images(self):
+        self.save()
+    
+    @classmethod
+    def search_by_category(cls, search_term):
+        '''
+        Method to filter images by category
+        '''
+        result = cls.objects.filter(category__category__icontains=search_term)
+        return result 
+   
+  
    
 class Category(models.Model):
     category = models.CharField(max_length =30)

@@ -41,6 +41,7 @@
             Categories
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">(This categories are available. Search them below)</a>
             <a class="dropdown-item" href="#">Sports</a>
             <a class="dropdown-item" href="#">Animals</a>
             <a class="dropdown-item" href="#">Nature</a>
@@ -54,8 +55,10 @@
             locations
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Nairobi</a>
+
+            <a class="dropdown-item" href="#">(This Locations are available. Search them below)</a>
             <a class="dropdown-item" href="#">Mombasa</a>
+            <a class="dropdown-item" href="#">Nairobi</a>
             <a class="dropdown-item" href="#">Nakuru</a>
             <a class="dropdown-item" href="#">Kisumu</a>
             <a class="dropdown-item" href="#">Naivasha</a>
@@ -65,12 +68,12 @@
       </ul>
       <div class="col-sm-4 col-md-4 navbar-right">
 
-        <form class="navbar-form" role="search" >
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}" >
 
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search image" name="result">
             <div class="input-group-btn">
-              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
             </div>
           </div>
 
